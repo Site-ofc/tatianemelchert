@@ -66,7 +66,7 @@
     html{scroll-behavior:auto;}
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
   }
-  body{
+  body{width:100%;overflow-x:hidden;
     font-family:var(--sans);
     color:var(--texto-escuro);
     background:var(--branco);
@@ -304,7 +304,7 @@
   .resultado-card:hover{border-color:var(--dourado);}
   .resultado-media{aspect-ratio:16/10;overflow:hidden;position:relative;}
   .resultado-media img{width:100%;height:100%;object-fit:contain;}
-  .resultado-body{padding:2rem 2.2rem 2.4rem;}
+  .resultado-body{width:100%;overflow-x:hidden;padding:2rem 2.2rem 2.4rem;}
   .resultado-body span.tag{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dourado);font-weight:600;}
   .resultado-body h3{font-size:1.4rem;margin:.6rem 0 .6rem;color:var(--texto-escuro);}
   .resultado-body p{font-size:.9rem;color:var(--texto-suave);font-weight:300;line-height:1.65;}
@@ -620,6 +620,35 @@
     .wa-float{width:52px;height:52px;bottom:calc(1.2rem + env(safe-area-inset-bottom));right:calc(1.2rem + env(safe-area-inset-right));}
     .top-float{width:42px;height:42px;bottom:calc(1.2rem + env(safe-area-inset-bottom));left:calc(1.2rem + env(safe-area-inset-left));}
   }
+
+  /* RESPONSIVE FIXES */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 100%; overflow-x: hidden; }
+  
+  @media (max-width: 768px) {
+    .wrap { padding: 0 16px !important; }
+    .hero-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+    .about-grid { grid-template-columns: 1fr !important; }
+    .carousel { gap: 16px !important; }
+    .card { min-width: 280px !important; }
+    .section-head { flex-direction: column !important; gap: 20px !important; }
+    .navlinks { display: none !important; }
+    .burger { display: flex !important; }
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 24px !important; }
+    h3 { font-size: 18px !important; }
+    section { padding: 60px 0 !important; }
+  }
+  
+  @media (max-width: 480px) {
+    .wrap { padding: 0 12px !important; }
+    h1 { font-size: 22px !important; }
+    h2 { font-size: 18px !important; }
+    .hero { padding-top: 80px !important; }
+    .hero-visual { height: 300px !important; }
+    .stat-card { position: static !important; margin-top: 20px !important; }
+  }
+
 </style>
 </head>
 <body>
