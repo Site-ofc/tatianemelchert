@@ -48,6 +48,9 @@
   img { opacity: 0; transition: opacity 0.5s ease-in; }
   img.loaded { opacity: 1; }
 
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
   :root{
     --preto:#0c0a09;
     --preto-2:#161311;
@@ -658,7 +661,7 @@
 
 <header id="header">
   <a href="#topo" class="logo-mark">
-    <img decoding="async" fetchpriority="high" src="assets/08_logo_chique_transparente.png" alt="Dra. Tatiane Melchert">
+    <img loading="lazy" decoding="async" fetchpriority="high" src="assets/08_logo_chique_transparente.png" alt="Dra. Tatiane Melchert">
     <span class="logo-text">
       <span class="l1">TATIANE MELCHERT</span>
       <span class="l2">Ortodontia & Estética</span>
@@ -1101,7 +1104,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-logo">
-          <img decoding="async" fetchpriority="high" src="assets/08_logo_chique_transparente.png" alt="Dra. Tatiane Melchert">
+          <img loading="lazy" decoding="async" fetchpriority="high" src="assets/08_logo_chique_transparente.png" alt="Dra. Tatiane Melchert">
           <span class="logo-text"><span class="l1">TATIANE MELCHERT</span></span>
         </div>
         <p class="small">Ortodontia infantil e adulto, clínica geral e estética dental, com atendimento humanizado em Joinville, SC.</p>
@@ -1261,6 +1264,19 @@
     const msg = 'Olá! Meu nome é ' + nome + ' (telefone ' + tel + ') e gostaria de agendar: ' + tipo + '.';
     window.open('https://wa.me/5547992448872?text=' + encodeURIComponent(msg), '_blank');
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
 </script>
 
 <script>
