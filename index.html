@@ -51,6 +51,9 @@
   img { opacity: 0; transition: opacity 0.5s ease-in; }
   img.loaded { opacity: 1; }
 
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
+  img.loaded { opacity: 1; }
+
   :root{
     --preto:#0c0a09;
     --preto-2:#161311;
@@ -1264,6 +1267,19 @@
     const msg = 'Olá! Meu nome é ' + nome + ' (telefone ' + tel + ') e gostaria de agendar: ' + tipo + '.';
     window.open('https://wa.me/5547992448872?text=' + encodeURIComponent(msg), '_blank');
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('loaded'));
+    }
+  });
+});
 </script>
 
 <script>
