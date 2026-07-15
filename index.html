@@ -9,19 +9,19 @@
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Dra. Tatiane Melchert — Ortodontia e Clínica Geral">
 <meta property="og:description" content="Especialista em Ortodontia infantil e adulto, alinhadores invisíveis e estética dental em Joinville, SC. Avaliação 5.0 no DentMap.">
-<meta property="og:image" content="assets/sorriso-perfeito.webp?v=2">
+<meta property="og:image" content="assets/sorriso-perfeito.jpg">
 <meta property="og:locale" content="pt_BR">
-<link rel="icon" href="assets/consultorio-moderno.webp?v=2">
+<link rel="icon" href="assets/consultorio-moderno.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/procedimento-ortodontia.webp?v=2">
+<link rel="preload" as="image" href="assets/procedimento-ortodontia.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dentist",
   "name": "Dra. Tatiane Melchert",
-  "image": "assets/procedimento-ortodontia.webp?v=2",
+  "image": "assets/procedimento-ortodontia.jpg",
   "telephone": "+5547992448872",
   "priceRange": "$$",
   "medicalSpecialty": "Orthodontics, General Dentistry",
@@ -44,11 +44,8 @@
 }
 </script>
 <style>
-  /* Otimização de carregamento de imagens */
-  img { opacity: 0; transition: opacity 0.4s ease-in; }
+  img { opacity: 0; transition: opacity 0.5s ease-in; }
   img.loaded { opacity: 1; }
-  /* Fallback se o JS falhar */
-  .no-js img { opacity: 1; }
 
   :root{
     --preto:#0c0a09;
@@ -67,510 +64,161 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;scroll-padding-top:var(--header-h);}
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
-  }
-  body{width:100%;overflow-x:hidden;
-    font-family:var(--sans);
-    color:var(--texto-escuro);
-    background:var(--branco);
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-    width:100%;
-  }
+  body{width:100%;overflow-x:hidden;font-family:var(--sans);color:var(--texto-escuro);background:var(--branco);-webkit-font-smoothing:antialiased;}
   img{max-width:100%;display:block;height:auto;width:100%;}
   a{text-decoration:none;color:inherit;}
-  ::selection{background:var(--dourado);color:var(--preto);}
-  :focus-visible{outline:2px solid var(--dourado);outline-offset:3px;}
-  .eyebrow{
-    font-family:var(--sans);
-    letter-spacing:.3em;
-    text-transform:uppercase;
-    font-size:.72rem;
-    color:var(--dourado);
-    font-weight:500;
-  }
   h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.05;}
   .container{width:100%;max-width:1240px;margin:0 auto;padding:0 4.5%;}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
-    padding:1rem 2.1rem;
-    font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
-    border:1px solid var(--dourado);
-    color:var(--dourado);
-    background:transparent;
-    transition:all .45s cubic-bezier(.4,0,.2,1);
-    cursor:pointer;
-    white-space:nowrap;
-    border-radius:2px;
-  }
-  .btn:hover{background:var(--dourado);color:var(--preto);}
-  .btn.solid{background:var(--dourado);color:var(--preto);}
-  .btn.solid:hover{background:var(--dourado-claro);border-color:var(--dourado-claro);}
-  .btn.on-dark{border-color:rgba(253,251,249,.7);color:var(--branco);}
-  .btn.on-dark:hover{background:var(--branco);color:var(--preto);border-color:var(--branco);}
-  .btn.on-light{border-color:var(--texto-escuro);color:var(--texto-escuro);}
-  .btn.on-light:hover{background:var(--texto-escuro);color:var(--branco);}
-  .btn.full{width:100%;}
 
-  /* ===== HEADER ===== */
   header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
+    position:fixed;top:0;left:0;width:100%;height:var(--header-h);
+    background:rgba(12,10,9,0.95);backdrop-filter:blur(10px);
     display:flex;align-items:center;justify-content:space-between;
-    padding:1.1rem 4.5%;
-    padding-top:calc(1.1rem + env(safe-area-inset-top));
-    transition:background .5s ease,padding .4s ease,box-shadow .4s ease,transform .35s ease;
-    background:rgba(12,10,9,.82);
-    backdrop-filter:blur(10px);
+    padding:0 4.5%;z-index:1000;border-bottom:1px solid var(--linha);
   }
-  header.scrolled{
-    background:rgba(12,10,9,0.94);
-    backdrop-filter:blur(14px);
-    padding:.75rem 4.5%;
-    padding-top:calc(.75rem + env(safe-area-inset-top));
-    box-shadow:0 2px 16px rgba(0,0,0,.22);
-  }
-  header.hide-nav{transform:translateY(-110%);}
-  .logo-mark{display:flex;align-items:center;gap:.7rem;}
-  .logo-mark img{width:40px;height:40px;object-fit:contain;flex-shrink:0;}
-  .logo-text{font-family:var(--serif);color:var(--dourado-claro);line-height:1.1;}
-  .logo-text .l1{font-size:1rem;letter-spacing:.08em;display:block;font-weight:600;}
-  .logo-text .l2{font-size:.48rem;letter-spacing:.18em;color:#a89674;text-transform:uppercase;font-family:var(--sans);font-weight:400;}
-  nav.links{display:flex;gap:1.6rem;}
-  nav.links a{
-    color:#e8ddd0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
-    position:relative;padding-bottom:5px;font-weight:400;
-  }
-  nav.links a::after{
-    content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--dourado);
-    transition:width .35s ease;
-  }
-  nav.links a:hover::after,nav.links a.active::after{width:100%;}
-  nav.links a.active{color:var(--dourado-claro);}
-  .nav-cta{display:flex;align-items:center;gap:1.1rem;}
-  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;}
-  .burger span{width:24px;height:1.5px;background:var(--dourado-claro);transition:all .3s ease;}
+  .logo-mark{display:flex;align-items:center;gap:1.2rem;}
+  .logo-mark img{width:42px;height:42px;object-fit:contain;opacity:1 !important;}
+  .logo-text{display:flex;flex-direction:column;line-height:1.1;}
+  .logo-text .l1{font-family:var(--serif);font-size:1.1rem;letter-spacing:.15em;color:var(--branco);font-weight:500;}
+  .logo-text .l2{font-size:.55rem;letter-spacing:.25em;color:var(--dourado);font-weight:400;margin-top:.2rem;}
 
-  /* ===== HERO ===== */
-  .hero{
-    position:relative;min-height:100svh;
-    display:flex;align-items:flex-start;
-    color:var(--branco);
-    overflow:hidden;
-    width:100%;
-    isolation:isolate;
-  }
-  @media(min-width:901px){
-    .hero{align-items:flex-end;}
-  }
-  .hero-bg{position:absolute;inset:0;z-index:-2;}
-  .hero-bg img{width:100%;height:auto;min-height:100%;object-fit:cover;object-position:center;transform:scale(1.08);animation:heroZoom 18s ease-out forwards;display:block;}
-  @keyframes heroZoom{to{transform:scale(1);}}
-  .hero-bg::after{
-    content:'';position:absolute;inset:0;
-    background:
-      linear-gradient(180deg, rgba(253,251,249,.2) 0%, rgba(253,251,249,.5) 32%, rgba(253,251,249,.9) 88%),
-      linear-gradient(90deg, rgba(253,251,249,.8) 0%, rgba(253,251,249,.4) 48%, rgba(253,251,249,.1) 100%);
-  }
-  .hero-content{position:relative;z-index:2;width:100%;}
-  .hero .hero-content{padding-top:calc(var(--header-h) + 4.5rem);padding-bottom:3rem;}
-  .hero-inner{max-width:680px;}
-  .hero{color:var(--texto-escuro);}
-  .hero .eyebrow{color:var(--dourado);margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem;font-weight:600;}
-  .hero .eyebrow::before{content:'';width:34px;height:1px;background:var(--dourado);display:inline-block;}
-  .hero h1{
-    font-size:clamp(2.5rem,6vw,4.6rem);
-    margin-bottom:1.4rem;
-    line-height:1.08;
-    letter-spacing:-.6px;
-    color:var(--texto-escuro);
-  }
-  .hero h1 .word{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;}
-  .hero h1 .word span{display:inline-block;transform:translateY(115%);opacity:0;animation:wordUp .95s cubic-bezier(.2,.7,.15,1) forwards;}
-  @keyframes wordUp{to{transform:translateY(0);opacity:1;}}
-  .hero h1 em{color:var(--dourado);font-style:italic;font-weight:500;}
-  .hero p.lead{
-    font-size:1.06rem;color:var(--texto-suave);max-width:520px;line-height:1.75;margin-bottom:2.4rem;font-weight:300;
-    opacity:0;animation:fadeUp 1s ease forwards;animation-delay:1.05s;
-  }
-  .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;opacity:0;animation:fadeUp 1s ease forwards;animation-delay:1.2s;}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  nav.links{display:flex;gap:2rem;}
+  nav.links a{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--branco);font-weight:400;transition:color .3s;}
+  nav.links a:hover{color:var(--dourado);}
 
-  .credenciais{
-    display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--linha);padding-top:1.5rem;
-    max-width:520px;opacity:0;animation:fadeUp 1s ease forwards;animation-delay:1.35s;
+  .nav-cta{display:flex;align-items:center;gap:1.5rem;}
+  .theme-btn{background:none;border:none;color:var(--branco);cursor:pointer;padding:.5rem;}
+  .agendar-btn{
+    background:transparent;border:1px solid var(--dourado);color:var(--dourado);
+    padding:.8rem 1.8rem;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;
+    transition:all .4s;
   }
-  .credenciais div{flex:1 1 33.33%;padding-right:1rem;margin-bottom:.6rem;}
-  .credenciais strong{font-family:var(--serif);font-size:1.65rem;color:var(--dourado);display:block;font-weight:600;}
-  .credenciais span{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--texto-suave);font-weight:500;}
+  .agendar-btn:hover{background:var(--dourado);color:var(--preto);}
 
-  .booking-bar{
-    position:relative;z-index:3;margin-top:2.8rem;
-    background:var(--branco);
-    border:1px solid var(--linha);
-    box-shadow:0 25px 60px rgba(35,31,28,.14);
-    padding:1.6rem 1.8rem;
-    display:grid;grid-template-columns:1.2fr 1fr 1.3fr auto;gap:1.4rem;align-items:end;
-    opacity:0;animation:fadeUp 1s ease forwards;animation-delay:1.5s;
-    transform:translateY(0);
-    max-width:100%;
-  }
-  .booking-field{display:flex;flex-direction:column;gap:.5rem;}
-  .booking-field label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado);font-weight:600;}
-  .booking-field input,.booking-field select{
-    border:none;border-bottom:1px solid var(--linha);background:transparent;
-    font-family:var(--sans);font-size:.92rem;color:var(--texto-escuro);padding:.35rem 0;
-  }
-  .booking-field input:focus,.booking-field select:focus{outline:none;border-bottom-color:var(--dourado);}
-  .booking-field input::placeholder{color:#b3a99b;}
-  .booking-bar .btn{height:fit-content;padding:.95rem 1.6rem;}
+  .hero{padding-top:var(--header-h);background:var(--preto);color:var(--branco);min-height:100vh;display:flex;align-items:center;}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center;padding:4rem 0;}
+  .hero-content{max-width:600px;}
+  .hero-eyebrow{display:block;margin-bottom:1.5rem;color:var(--dourado);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;}
+  .hero h1{font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:2rem;font-style:italic;}
+  .hero p{font-size:1.1rem;line-height:1.7;color:#cfc3b3;margin-bottom:2.5rem;font-weight:300;}
+  .hero-btns{display:flex;gap:1rem;}
+  .btn-primary{background:var(--dourado);color:var(--preto);padding:1.2rem 2.4rem;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;}
+  .btn-secondary{border:1px solid var(--linha);color:var(--branco);padding:1.2rem 2.4rem;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;}
 
-  .scroll-cue{
-    position:relative;z-index:2;margin:2.4rem 0 2rem;
-    display:flex;align-items:center;gap:.7rem;color:var(--texto-suave);
-    font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
-    opacity:0;animation:fadeUp 1s ease forwards;animation-delay:1.75s;
-  }
-  .scroll-cue .line{width:38px;height:1px;background:linear-gradient(90deg,var(--dourado),transparent);}
+  .hero-visual{position:relative;height:600px;overflow:hidden;}
+  .hero-visual img{width:100%;height:100%;object-fit:cover;}
 
-  @media(max-width:1080px){
-    .booking-bar{grid-template-columns:1fr 1fr;}
-    .booking-bar .btn{grid-column:span 2;}
+  .section-padding{padding:8rem 0;}
+  .section-header{max-width:700px;margin-bottom:4rem;}
+  .section-header h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.5rem;}
+  .section-header p{font-size:1.05rem;line-height:1.7;color:var(--texto-suave);}
+
+  .esp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+  .esp-card{padding:3rem 2.5rem;background:var(--rose-2);border:1px solid var(--linha);transition:transform .4s;}
+  .esp-card:hover{transform:translateY(-10px);border-color:var(--dourado);}
+  .esp-num{display:block;font-size:.8rem;color:var(--dourado);margin-bottom:1.5rem;font-weight:600;}
+  .esp-card h3{font-size:1.5rem;margin-bottom:1rem;}
+  .esp-card p{font-size:.9rem;line-height:1.6;color:var(--texto-suave);}
+
+  .resultados{background:var(--preto);color:var(--branco);}
+  .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+  .res-img{border:1px solid var(--linha);padding:1rem;background:var(--preto-2);}
+  
+  .depoimentos{background:var(--rose-2);}
+  .dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+  .dep-card{background:var(--branco);padding:3rem 2.5rem;border:1px solid var(--linha);}
+  .stars{color:var(--dourado);margin-bottom:1.5rem;}
+  .dep-card p{font-style:italic;line-height:1.7;margin-bottom:2rem;}
+  .dep-author{font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;}
+
+  .contato-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+  .cont-card{padding:2rem;border:1px solid var(--linha);text-align:center;}
+  .cont-card span{display:block;font-size:.7rem;color:var(--dourado);text-transform:uppercase;letter-spacing:.2em;margin-bottom:.8rem;}
+  .cont-card strong{font-size:1.1rem;font-weight:500;}
+
+  footer{background:var(--preto);color:var(--branco);padding:4rem 0;border-top:1px solid var(--linha);}
+  .foot-bottom{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--linha);display:flex;justify-content:space-between;font-size:.75rem;color:#666;}
+
+  @media(max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{height:400px;}
+    .esp-grid{grid-template-columns:1fr 1fr;}
+    .contato-grid{grid-template-columns:1fr 1fr;}
   }
-  @media(max-width:760px){
-    .hero .hero-content{padding-top:calc(var(--header-h) + 3.6rem);}
-    .credenciais div{flex:1 1 45%;}
-    .booking-bar{grid-template-columns:1fr;padding:1.4rem 1.3rem;gap:1rem;}
-    .booking-bar .btn{grid-column:span 1;}
-    .scroll-cue{display:none;}
+  @media(max-width:768px){
+    nav.links{display:none;}
+    .esp-grid{grid-template-columns:1fr;}
+    .res-grid{grid-template-columns:1fr;}
+    .dep-grid{grid-template-columns:1fr;}
+    .contato-grid{grid-template-columns:1fr;}
   }
 
-  /* ===== SECTIONS shared ===== */
-  .sec-head{max-width:640px;margin-bottom:3.4rem;}
-  .sec-head .eyebrow{margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;}
-  .sec-head .eyebrow::before{content:'';width:34px;height:1px;background:var(--dourado);display:inline-block;}
-  .sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);color:var(--texto-escuro);}
-  .sec-head p{color:var(--texto-suave);margin-top:1rem;font-weight:300;line-height:1.7;font-size:.98rem;}
-  .sec-head.light h2, .sec-head.light .eyebrow{color:var(--dourado-claro);}
-  .sec-head.light p{color:#cfc3b3;}
-  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .sec-head.center .eyebrow{justify-content:center;}
-  .sec-head.center .eyebrow::before{display:none;}
-
-  /* ===== ESPECIALIZACOES ===== */
-  .especializacoes{padding:8rem 0 7rem;background:var(--branco);width:100%;}
-  .esp-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--linha);
-    border:1px solid var(--linha);
-  }
-  .esp-card{
-    background:var(--branco);padding:3rem 2.4rem;transition:all .4s ease;
-    position:relative;
-  }
-  .esp-card:hover{background:var(--rose-2);}
-  .esp-num{font-family:var(--serif);font-size:.84rem;color:var(--dourado);letter-spacing:.1em;margin-bottom:1.6rem;display:block;font-weight:500;}
-  .esp-card h3{font-size:1.4rem;margin-bottom:.8rem;color:var(--texto-escuro);line-height:1.2;}
-  .esp-card p{font-size:.88rem;color:var(--texto-suave);line-height:1.65;font-weight:300;}
-
-  /* ===== PROCEDIMENTOS alternado ===== */
-  .experiencias{padding:8rem 0;background:var(--preto);color:var(--branco);width:100%;}
-  .exp-row{
-    display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;
-    padding:3.6rem 0;border-top:1px solid var(--linha);
-  }
-  .exp-row:first-of-type{border-top:none;}
-  .exp-row:nth-of-type(even) .exp-media{order:2;}
-  .exp-media{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/3;}
-  .exp-media img{width:100%;height:100%;object-fit:contain;background:var(--rose-2);transition:transform .9s cubic-bezier(.2,.8,.2,1);}
-  .exp-row:hover .exp-media img{transform:scale(1.06);}
-  .exp-tag{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dourado-claro);margin-bottom:1rem;display:block;font-weight:600;}
-  .exp-text h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:1rem;color:var(--branco);}
-  .exp-text p{color:#c9bda8;font-weight:300;line-height:1.75;font-size:.95rem;margin-bottom:1.4rem;}
-  .exp-text a.saiba{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado);border-bottom:1px solid var(--dourado);padding-bottom:.3rem;}
-  @media(max-width:900px){
-    .exp-row{grid-template-columns:1fr;gap:1.8rem;padding:2.8rem 0;}
-    .exp-row:nth-of-type(even) .exp-media{order:0;}
-  }
-
-  .proc-mini{margin-top:5rem;}
-  .proc-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
-  .proc-mini-card{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:1/1;}
-  .proc-mini-card img{width:100%;height:100%;object-fit:contain;background:var(--rose-2);transition:transform .7s ease;}
-  .proc-mini-card:hover img{transform:scale(1.08);}
-  .proc-mini-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85));}
-  .proc-mini-label{position:absolute;left:0;right:0;bottom:0;padding:1.1rem;z-index:2;font-family:var(--serif);font-size:1.05rem;color:var(--branco);}
-  @media(max-width:760px){.proc-mini-grid{grid-template-columns:repeat(2,1fr);}}
-
-  /* ===== ANTES E DEPOIS ===== */
-  .resultados{padding:8rem 0;background:var(--branco);width:100%;}
-  .resultados-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.6rem;}
-  .resultado-card{border:1px solid var(--linha);padding:1rem;border-radius:4px;}
-  .resultado-card img{width:100%;height:auto;border-radius:2px;}
-  .resultado-info{margin-top:1.2rem;text-align:center;}
-  .resultado-info h4{font-size:1.2rem;margin-bottom:.4rem;}
-  .resultado-info p{font-size:.84rem;color:var(--texto-suave);text-transform:uppercase;letter-spacing:.1em;}
-
-  /* ===== SOBRE ===== */
-  .sobre{padding:8rem 0;background:var(--rose-2);width:100%;}
-  .sobre-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:center;}
-  .sobre-media{position:relative;}
-  .sobre-media img{width:100%;border-radius:3px;box-shadow:0 30px 70px rgba(0,0,0,.12);}
-  .sobre-text h2{margin-bottom:1.8rem;}
-  .sobre-text p{font-size:1.02rem;line-height:1.8;color:var(--texto-suave);margin-bottom:1.8rem;font-weight:300;}
-  .sobre-nome{display:block;font-family:var(--serif);font-size:1.6rem;margin-bottom:.3rem;color:var(--texto-escuro);}
-  .sobre-cro{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dourado);font-weight:600;}
-  .sobre-features{display:grid;grid-template-columns:1fr;gap:1.8rem;margin-top:3rem;}
-  .sobre-feat h5{font-size:1.05rem;margin-bottom:.6rem;display:flex;align-items:center;gap:.7rem;}
-  .sobre-feat h5::before{content:'';width:8px;height:8px;background:var(--dourado);border-radius:50%;}
-  .sobre-feat p{font-size:.88rem;margin-bottom:0;}
-  @media(max-width:900px){
-    .sobre-grid{grid-template-columns:1fr;gap:3rem;}
-    .sobre-media{order:2;}
-  }
-
-  /* ===== GALERIA ===== */
-  .galeria{padding:8rem 0;background:var(--branco);width:100%;}
-  .gal-grid{
-    display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,240px);gap:1.2rem;
-  }
-  .gal-item{position:relative;overflow:hidden;border-radius:3px;cursor:pointer;}
-  .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;}
-  .gal-item:hover img{transform:scale(1.08);}
-  .gal-1{grid-column:span 3;grid-row:span 2;}
-  .gal-2{grid-column:span 3;grid-row:span 1;}
-  .gal-3{grid-column:span 1;grid-row:span 1;}
-  .gal-4{grid-column:span 1;grid-row:span 1;}
-  .gal-5{grid-column:span 1;grid-row:span 1;}
-  @media(max-width:900px){
-    .gal-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto;gap:1rem;}
-    .gal-1,.gal-2{grid-column:span 2;aspect-ratio:4/3;}
-    .gal-3,.gal-4,.gal-5{grid-column:span 1;aspect-ratio:1/1;}
-  }
-
-  /* ===== DEPOIMENTOS ===== */
-  .depoimentos{padding:8rem 0;background:var(--preto);color:var(--branco);width:100%;}
-  .dep-slider{max-width:800px;margin:0 auto;text-align:center;}
-  .dep-item{display:none;animation:fadeIn .6s ease;}
-  .dep-item.active{display:block;}
-  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-  .dep-stars{color:var(--dourado);margin-bottom:1.8rem;font-size:1.1rem;}
-  .dep-text{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.4;margin-bottom:2.2rem;font-style:italic;color:var(--dourado-claro);}
-  .dep-author{display:flex;flex-direction:column;gap:.4rem;}
-  .dep-author strong{font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;}
-  .dep-author span{font-size:.68rem;color:#a89674;letter-spacing:.1em;}
-  .dep-nav{display:flex;justify-content:center;gap:1.5rem;margin-top:3.5rem;}
-  .dep-btn{
-    width:48px;height:48px;border:1px solid rgba(211,211,211,.25);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s ease;
-  }
-  .dep-btn:hover{background:var(--dourado);border-color:var(--dourado);color:var(--preto);}
-  .dep-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;}
-
-  /* ===== CONTATO ===== */
-  .contato{padding:8rem 0;background:var(--branco);width:100%;}
-  .contato-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;}
-  .contato-info h2{margin-bottom:2.5rem;}
-  .contato-list{display:flex;flex-direction:column;gap:2.8rem;}
-  .contato-item h5{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);margin-bottom:.8rem;font-weight:600;}
-  .contato-item p, .contato-item a{font-size:1.1rem;line-height:1.5;color:var(--texto-escuro);font-weight:400;}
-  .contato-item a:hover{color:var(--dourado);}
-  .contato-social{display:flex;gap:1.5rem;margin-top:1rem;}
-  .contato-social a svg{width:22px;height:22px;fill:var(--texto-escuro);transition:fill .3s ease;}
-  .contato-social a:hover svg{fill:var(--dourado);}
-  .map-box{width:100%;height:480px;background:#eee;border-radius:3px;overflow:hidden;border:1px solid var(--linha);}
-  .map-box iframe{width:100%;height:100%;border:none;filter:grayscale(0.2) contrast(1.1);}
-  @media(max-width:900px){
-    .contato-grid{grid-template-columns:1fr;gap:4rem;}
-    .map-box{height:350px;}
-  }
-
-  /* ===== FOOTER ===== */
-  footer{padding:5rem 0 3rem;background:var(--preto);color:var(--branco);width:100%;}
-  .foot-main{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(211,211,211,.1);}
-  .foot-brand .logo-mark{margin-bottom:1.5rem;}
-  .foot-brand p{font-size:.88rem;color:#a89674;line-height:1.7;max-width:280px;font-weight:300;}
-  .foot-col h6{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dourado);margin-bottom:1.8rem;font-weight:600;}
-  .foot-col nav{display:flex;flex-direction:column;gap:.9rem;}
-  .foot-col nav a{font-size:.84rem;color:#cfc3b3;transition:color .3s ease;font-weight:300;}
-  .foot-col nav a:hover{color:var(--dourado);}
-  .foot-col p{font-size:.84rem;color:#cfc3b3;line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
-  .foot-col a{display:block;font-size:.84rem;color:#cfc3b3;margin-bottom:.6rem;}
-  .foot-social{display:flex;gap:1.2rem;margin-top:1.5rem;}
-  .foot-social a svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;}
-  .foot-bottom{padding-top:2.5rem;display:flex;justify-content:space-between;align-items:center;font-size:.68rem;color:rgba(207,195,179,.5);letter-spacing:.05em;}
-  @media(max-width:900px){
-    .foot-main{grid-template-columns:1fr 1fr;gap:3rem;}
-  }
-  @media(max-width:500px){
-    .foot-main{grid-template-columns:1fr;}
-    .foot-bottom{flex-direction:column;gap:1rem;text-align:center;}
-  }
-
-  /* ===== UTILS & FLOATS ===== */
   .wa-float{
-    position:fixed;bottom:2.5rem;right:2.5rem;z-index:90;
-    width:60px;height:60px;background:#25d366;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 30px rgba(37,211,102,.35);
-    transition:transform .4s cubic-bezier(.175,.885,.32,1.275);
+    position:fixed;bottom:2rem;right:2rem;width:60px;height:60px;
+    background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 25px rgba(37,211,102,0.3);z-index:999;transition:transform .3s;
   }
-  .wa-float:hover{transform:scale(1.1) rotate(8deg);}
-  .wa-float svg{width:32px;height:32px;fill:#fff;}
-  .top-float{
-    position:fixed;bottom:7.5rem;right:2.8rem;z-index:89;
-    width:40px;height:40px;background:var(--branco);border:1px solid var(--linha);
-    border-radius:50%;display:flex;align-items:center;justify-content:center;
-    opacity:0;visibility:hidden;transform:translateY(20px);transition:all .4s ease;
-  }
-  .top-float.show{opacity:1;visibility:visible;transform:translateY(0);}
-  .top-float svg{width:18px;height:18px;stroke:var(--texto-escuro);}
-
-  /* ===== LIGHTBOX ===== */
-  .lightbox{
-    position:fixed;inset:0;background:rgba(12,10,9,.98);z-index:1000;
-    display:none;align-items:center;justify-content:center;padding:2rem;
-  }
-  .lightbox.active{display:flex;}
-  .lightbox img{max-width:90%;max-height:80vh;object-fit:contain;border-radius:2px;box-shadow:0 0 50px rgba(0,0,0,.5);}
-  .lightbox-close{position:absolute;top:2rem;right:2rem;background:none;border:none;color:var(--branco);cursor:pointer;padding:.5rem;}
-  .lightbox-close svg{width:32px;height:32px;}
-  .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.05);border:none;color:var(--branco);padding:1.5rem;cursor:pointer;transition:background .3s;}
-  .lightbox-nav:hover{background:rgba(255,255,255,.12);}
-  .lightbox-prev{left:0;border-radius:0 4px 4px 0;}
-  .lightbox-next{right:0;border-radius:4px 0 0 4px;}
-  .lightbox-nav svg{width:28px;height:28px;}
-  .lightbox-caption{position:absolute;bottom:3rem;color:var(--dourado-claro);font-family:var(--serif);font-size:1.2rem;letter-spacing:.05em;}
-
-  /* Mobile menu overlay */
-  .mobile-menu{
-    position:fixed;inset:0;background:var(--preto);z-index:200;
-    display:none;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
-  }
-  .mobile-menu a{color:var(--branco);font-size:1.5rem;font-family:var(--serif);letter-spacing:.1em;text-transform:uppercase;}
-  .close-menu{position:absolute;top:2rem;right:2rem;color:var(--branco);cursor:pointer;padding:.5rem;}
-  .close-menu svg{width:32px;height:32px;}
-
-  @media(max-width:900px){
-    .burger{display:flex;}
-    nav.links, .nav-cta .btn{display:none;}
-  }
+  .wa-float:hover{transform:scale(1.1);}
+  .wa-float svg{width:30px;height:30px;fill:white;}
 </style>
 </head>
-<body id="topo">
+<body>
 
-<header id="header">
-  <a href="#topo" class="logo-mark">
-    <img src="assets/08_logo_chique_transparente.webp?v=2" alt="Dra. Tatiane Melchert" width="40" height="40">
+<header>
+  <a href="#" class="logo-mark">
+    <img src="assets/08_logo_chique_transparente.png" alt="Logo">
     <div class="logo-text">
-      <span class="l1">TATIANE MELCHERT</span>
+      <span class="l1">site.ofc</span>
       <span class="l2">ORTODONTIA E CLÍNICA GERAL</span>
     </div>
   </a>
-  
   <nav class="links">
-    <a href="#sobre" data-nav>SOBRE</a>
-    <a href="#especializacoes" data-nav>ESPECIALIDADES</a>
-    <a href="#procedimentos" data-nav>PROCEDIMENTOS</a>
-    <a href="#resultados" data-nav>CASOS CLÍNICOS</a>
-    <a href="#galeria" data-nav>CLÍNICA</a>
-    <a href="#depoimentos" data-nav>DEPOIMENTOS</a>
-    <a href="#contato" data-nav>CONTATO</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#especializacoes">Especialidades</a>
+    <a href="#resultados">Casos Clínicos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
   </nav>
-
   <div class="nav-cta">
-    <button id="themeToggle" class="theme-btn" style="background:none;border:none;color:var(--dourado-claro);cursor:pointer;padding:.5rem;" aria-label="Alternar modo claro/escuro">
-      <svg class="sun" style="display:none;width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M10 15a5 5 0 100-10 5 5 0 000 10zM10 0a1 1 0 011 1v2a1 1 0 11-2 0V1a1 1 0 011-1zM10 16a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zM4.464 4.464a1 1 0 011.414 0L7.293 5.879a1 1 0 01-1.414 1.414L4.464 5.879a1 1 0 010-1.414zm11.314 11.314a1 1 0 011.414 0l1.414 1.414a1 1 0 01-1.414 1.414l-1.414-1.414a1 1 0 010-1.414zM0 10a1 1 0 011-1h2a1 1 0 110 2H1a1 1 0 01-1-1zm16 0a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zM4.464 15.536a1 1 0 010 1.414L3.05 18.364a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0zm11.314-11.314a1 1 0 010 1.414l-1.414 1.414a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0z"/></svg>
-      <svg class="moon" style="width:20px;height:20px;fill:currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-    </button>
-    <a href="https://wa.me/5547992448872" class="btn solid">AGENDAR</a>
-    <div class="burger" id="burger">
-      <span></span><span></span><span></span>
-    </div>
+    <a href="https://wa.me/5547992448872" class="agendar-btn">Agendar</a>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <div class="close-menu" id="closeMenu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </div>
-  <a href="#sobre" class="mob-link">Sobre</a>
-  <a href="#especializacoes" class="mob-link">Especialidades</a>
-  <a href="#procedimentos" class="mob-link">Procedimentos</a>
-  <a href="#resultados" class="mob-link">Casos Clínicos</a>
-  <a href="#galeria" class="mob-link">Clínica</a>
-  <a href="#depoimentos" class="mob-link">Depoimentos</a>
-  <a href="#contato" class="mob-link">Contato</a>
-</div>
-
-<section class="hero">
-  <div class="hero-bg">
-    <img src="assets/02_consultorio.webp?v=2" alt="Dra. Tatiane Melchert em seu consultório" width="1920" height="1080">
-  </div>
-  <div class="hero-content">
-    <div class="container">
-      <div class="hero-inner">
-        <span class="eyebrow">Ortodontia e Clínica Geral · Joinville SC</span>
-        <h1 id="heroTitle">Seu sorriso, com <br><em>cuidado e precisão.</em></h1>
-        <p class="lead">Especialista em Ortodontia infantil e adulto, com trabalho consolidado em alinhadores invisíveis. Atendimento humanizado, claro e atencioso, do primeiro contato ao sorriso pronto.</p>
-        
-        <div class="hero-ctas">
-          <a href="https://wa.me/5547992448872" class="btn solid">WHATSAPP</a>
-          <a href="tel:+5547992448872" class="btn on-light">LIGAR AGORA</a>
+<section class="hero" id="topo">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Ortodontia e Clínica Geral · Joinville SC</span>
+        <h1>Seu sorriso, com <i>cuidado e precisão.</i></h1>
+        <p>Especialista em Ortodontia infantil e adulto, com trabalho consolidado em alinhadores invisíveis. Atendimento humanizado, claro e atencioso, do primeiro contato ao sorriso pronto.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5547992448872" class="btn-primary">WhatsApp</a>
+          <a href="tel:+5547992448872" class="btn-secondary">Ligar Agora</a>
         </div>
-
-        <div class="credenciais">
-          <div>
-            <strong>5.0</strong>
-            <span>Avaliação DentMap</span>
-          </div>
-          <div>
-            <strong>76+</strong>
-            <span>Avaliações de pacientes</span>
-          </div>
-        </div>
-
-        <form class="booking-bar" id="bookingForm">
-          <div class="booking-field">
-            <label for="bkNome">Nome</label>
-            <input type="text" id="bkNome" placeholder="Seu nome" required>
-          </div>
-          <div class="booking-field">
-            <label for="bkTel">Telefone</label>
-            <input type="tel" id="bkTel" placeholder="(47) 90000-0000" required>
-          </div>
-          <div class="booking-field">
-            <label for="bkTipo">Tipo de atendimento</label>
-            <select id="bkTipo">
-              <option>Ortodontia Infantil</option>
-              <option>Ortodontia Adulto</option>
-              <option>Alinhadores Invisíveis</option>
-              <option>Estética Dental</option>
-              <option>Clareamento Dental</option>
-              <option>Clínica Geral</option>
-              <option>Avaliação geral</option>
-            </select>
-          </div>
-          <button type="submit" class="btn solid">VERIFICAR DISPONIBILIDADE</button>
-        </form>
-
-        <div class="scroll-cue">
-          <div class="line"></div>
-          <span>Role para explorar</span>
-        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/02_consultorio.jpg" alt="Consultório Dra. Tatiane Melchert" class="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="especializacoes" id="especializacoes">
+<section class="section-padding" id="sobre">
   <div class="container">
-    <div class="sec-head">
+    <div class="section-header">
+      <span class="eyebrow">Sobre a Doutora</span>
+      <h2>Especialista dedicada ao seu sorriso.</h2>
+      <p>Dra. Tatiane Melchert é cirurgiã-dentista especialista em Ortodontia, atuando em Joinville, SC. Sua prática combina técnica apurada com um atendimento genuinamente humanizado, com atenção especial ao público infantil e a pacientes com receio de procedimentos dentários.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="especializacoes" style="background:var(--rose-2);">
+  <div class="container">
+    <div class="section-header">
       <span class="eyebrow">Especialidades</span>
       <h2>Áreas de atuação</h2>
-      <p>Formação especializada em Ortodontia e dedicação constante às melhores técnicas para o seu sorriso.</p>
     </div>
-
     <div class="esp-grid">
       <div class="esp-card">
         <span class="esp-num">01</span>
@@ -585,262 +233,80 @@
       <div class="esp-card">
         <span class="esp-num">03</span>
         <h3>Alinhadores Invisíveis</h3>
-        <p>Tratamento ortodôntico invisível e confortável, com trabalho consolidado nessa tecnologia.</p>
-      </div>
-      <div class="esp-card">
-        <span class="esp-num">04</span>
-        <h3>Estética Dental</h3>
-        <p>Facetas, resinas e ajustes estéticos para harmonizar o sorriso de forma natural e segura.</p>
-      </div>
-      <div class="esp-card">
-        <span class="esp-num">05</span>
-        <h3>Clínica Geral</h3>
-        <p>Cuidado completo da saúde bucal, com prevenção, restaurações e acompanhamento contínuo.</p>
-      </div>
-      <div class="esp-card">
-        <span class="esp-num">06</span>
-        <h3>Clareamento Dental</h3>
-        <p>Procedimentos seguros para um sorriso mais claro, com resultado natural e duradouro.</p>
+        <p>Tratamento ortodôntico invisível e confortável, com trabalho consolidado nessa tecnologia (Invisalign).</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="experiencias" id="procedimentos">
+<section class="section-padding resultados" id="resultados">
   <div class="container">
-    <div class="sec-head light">
-      <span class="eyebrow">Serviços</span>
-      <h2>Procedimentos em destaque</h2>
+    <div class="section-header">
+      <span class="eyebrow">Casos Clínicos</span>
+      <h2 style="color:var(--branco)">Transformações reais</h2>
+      <p style="color:#cfc3b3">Cada tratamento é único. Confira exemplos representativos de transformações conduzidas com cuidado e planejamento.</p>
     </div>
-
-    <div class="exp-row">
-      <div class="exp-media">
-        <img src="assets/05_especialista_em_acao.webp?v=2" alt="Dra. Tatiane Melchert em atendimento ortodôntico" loading="lazy">
+    <div class="res-grid">
+      <div class="res-img">
+        <img src="assets/casos-antes-depois.jpg" alt="Antes e Depois" class="lazy">
       </div>
-      <div class="exp-text">
-        <span class="exp-tag">Tecnologia invisível</span>
-        <h3>Ortodontia com Alinhadores Invisíveis</h3>
-        <p>Trabalho consolidado com alinhadores ortodônticos modernos, proporcionando um tratamento discreto, confortável e com etapas explicadas com clareza a cada consulta.</p>
-        <a href="https://wa.me/5547992448872" class="saiba">Falar agora →</a>
-      </div>
-    </div>
-
-    <div class="exp-row">
-      <div class="exp-media">
-        <img src="assets/07_antes_depois_estetica.webp?v=2" alt="Estética e harmonização do sorriso" loading="lazy">
-      </div>
-      <div class="exp-text">
-        <span class="exp-tag">Estética</span>
-        <h3>Estética e Harmonização do Sorriso</h3>
-        <p>Clareamento, ajustes estéticos e planejamento personalizado para um sorriso equilibrado, natural e alinhado às características de cada paciente.</p>
-        <a href="https://wa.me/5547992448872" class="saiba">Agendar avaliação →</a>
-      </div>
-    </div>
-
-    <div class="exp-row">
-      <div class="exp-media">
-        <img src="assets/nova-ortodontia.webp?v=2" alt="Sorriso com aparelho ortodôntico" loading="lazy">
-      </div>
-      <div class="exp-text">
-        <span class="exp-tag">Ortodontia</span>
-        <h3>Ortodontia Infantil e Adulto</h3>
-        <p>Atendimento especializado para todas as idades, com atenção redobrada a pacientes com receio de procedimentos dentários e explicações transparentes em cada etapa.</p>
-        <a href="https://wa.me/5547992448872" class="saiba">Agendar avaliação →</a>
-      </div>
-    </div>
-
-    <div class="proc-mini">
-      <div class="proc-mini-grid">
-        <div class="proc-mini-card">
-          <img src="assets/IMG_3169.webp?v=2" alt="Clínica Geral" loading="lazy">
-          <span class="proc-mini-label">Clínica Geral</span>
-        </div>
-        <div class="proc-mini-card">
-          <img src="assets/IMG_3170.webp?v=2" alt="Clareamento Dental" loading="lazy">
-          <span class="proc-mini-label">Clareamento</span>
-        </div>
-        <div class="proc-mini-card">
-          <img src="assets/IMG_3171.webp?v=2" alt="Avaliação Ortodôntica" loading="lazy">
-          <span class="proc-mini-label">Avaliação</span>
-        </div>
-        <div class="proc-mini-card">
-          <img src="assets/IMG_3172.webp?v=2" alt="Ortodontia" loading="lazy">
-          <span class="proc-mini-label">Ortodontia</span>
-        </div>
+      <div class="res-content">
+        <h3 style="font-size:2rem;margin-bottom:1.5rem;font-style:italic;">Excelência em cada detalhe</h3>
+        <p style="line-height:1.8;color:#cfc3b3;margin-bottom:2rem;">Utilizamos as melhores tecnologias para garantir resultados previsíveis e estéticos, priorizando sempre a saúde funcional do paciente.</p>
+        <a href="https://wa.me/5547992448872" class="btn-primary">Ver mais casos</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="resultados" id="resultados">
+<section class="section-padding" id="depoimentos">
   <div class="container">
-    <div class="sec-head center">
-      <span class="eyebrow">Resultados</span>
-      <h2>Casos Clínicos</h2>
-      <p>Cada tratamento é único. Confira exemplos representativos de transformações conduzidas com cuidado e planejamento.</p>
+    <div class="section-header">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que dizem os pacientes</h2>
     </div>
-
-    <div class="resultados-grid">
-      <div class="resultado-card">
-        <img src="assets/casos-antes-depois.webp?v=2" alt="Casos clínicos de antes e depois" loading="lazy">
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento impecável! A Dra. Tatiane é muito atenciosa e explica cada detalhe do tratamento. Meu filho adora ir ao dentista agora."</p>
+        <span class="dep-author">Mariana S.</span>
       </div>
-      <div class="resultado-card">
-        <img src="assets/06_antes_depois_ortodontia.webp?v=2" alt="Caso de Ortodontia" loading="lazy">
+      <div class="dep-card">
+        <div class="stars">★★★★★</div>
+        <p>"Excelente profissional. O resultado do meu tratamento com alinhadores superou as expectativas. Recomendo muito!"</p>
+        <span class="dep-author">Ricardo F.</span>
+      </div>
+      <div class="dep-card">
+        <div class="stars">★★★★★</div>
+        <p>"Clínica linda e acolhedora. A Dra. transmite muita segurança e o atendimento é nota 10."</p>
+        <span class="dep-author">Juliana M.</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sobre" id="sobre">
+<section class="section-padding" id="contato">
   <div class="container">
-    <div class="sobre-grid">
-      <div class="sobre-media">
-        <img src="assets/dra-tatiane-melchert-nova.webp?v=2" alt="Dra. Tatiane Melchert" loading="lazy">
-      </div>
-      <div class="sobre-text">
-        <span class="eyebrow">Sobre a doutora</span>
-        <h2>Especialista dedicada ao seu sorriso.</h2>
-        <p>Dra. Tatiane Melchert é cirurgiã-dentista especialista em Ortodontia infantil e adulto, atuando também em Clínica Geral e Estética Dental em Joinville, SC. Sua prática combina técnica apurada com um atendimento genuinamente humanizado.</p>
-        <p>Tem especial atenção ao público infantil e a pacientes com receio de procedimentos dentários, com trabalho consolidado em aparelhos ortodônticos e tecnologias como o Invisalign.</p>
-        <p>Pacientes destacam sua simpatia e sua capacidade de explicar cada etapa do tratamento com clareza, transmitindo segurança e confiança do início ao fim.</p>
-        
-        <div class="sobre-perfil">
-          <span class="sobre-nome">Tatiane Melchert</span>
-          <span class="sobre-cro">Cirurgiã-Dentista CRO-SC 19369</span>
-        </div>
-
-        <div class="sobre-features">
-          <div class="sobre-feat">
-            <h5>Atendimento Humanizado</h5>
-            <p>Atenção especial ao público infantil e a pacientes com receio de procedimentos dentários.</p>
-          </div>
-          <div class="sobre-feat">
-            <h5>Expertise em Alinhadores</h5>
-            <p>Trabalho consolidado com aparelhos ortodônticos e tecnologias como o Invisalign.</p>
-          </div>
-          <div class="sobre-feat">
-            <h5>Simpatia e Clareza</h5>
-            <p>Explicação de cada etapa do tratamento, transmitindo segurança e confiança.</p>
-          </div>
-        </div>
-      </div>
+    <div class="section-header">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos conversar?</h2>
     </div>
-  </div>
-</section>
-
-<section class="galeria" id="galeria">
-  <div class="container">
-    <div class="sec-head center">
-      <span class="eyebrow">Espaço</span>
-      <h2>Conheça a clínica</h2>
-      <p>Ambiente acolhedor, organizado e pensado para o conforto de cada paciente.</p>
-    </div>
-
-    <div class="gal-grid">
-      <div class="gal-item gal-1" onclick="openLightbox(0)">
-        <img src="assets/02_consultorio.webp?v=2" alt="Consultório" loading="lazy">
-      </div>
-      <div class="gal-item gal-2" onclick="openLightbox(1)">
-        <img src="assets/05_especialista_em_acao.webp?v=2" alt="Dra. Tatiane Melchert" loading="lazy">
-      </div>
-      <div class="gal-item gal-3" onclick="openLightbox(2)">
-        <img src="assets/IMG_3169.webp?v=2" alt="Atendimento" loading="lazy">
-      </div>
-      <div class="gal-item gal-4" onclick="openLightbox(3)">
-        <img src="assets/IMG_3170.webp?v=2" alt="Ortodontia" loading="lazy">
-      </div>
-      <div class="gal-item gal-5" onclick="openLightbox(4)">
-        <img src="assets/IMG_3171.webp?v=2" alt="Estética Dental" loading="lazy">
-      </div>
-      <div class="gal-item gal-6" onclick="openLightbox(5)" style="grid-column:span 1;grid-row:span 1;">
-        <img src="assets/IMG_3172.webp?v=2" alt="Espaço da clínica" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="depoimentos" id="depoimentos">
-  <div class="container">
-    <div class="sec-head center light">
-      <span class="eyebrow">Pacientes</span>
-      <h2>O que dizem</h2>
-    </div>
-
-    <div class="dep-slider">
-      <div class="dep-item active">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"Minha filha tinha muito medo de dentista. A Dra. Tatiane foi extremamente paciente, explicou tudo de um jeito que ela entendeu e hoje ela vai feliz para as consultas."</p>
-        <div class="dep-author">
-          <strong>Mariana S.</strong>
-          <span>Mãe de paciente da Ortodontia Infantil</span>
-        </div>
-      </div>
-      <div class="dep-item">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"Excelente profissional! Iniciei meu tratamento com alinhadores e estou muito satisfeito com a clareza das explicações e a precisão do acompanhamento."</p>
-        <div class="dep-author">
-          <strong>Ricardo F.</strong>
-          <span>Paciente de Alinhadores Invisíveis</span>
-        </div>
-      </div>
-      <div class="dep-item">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"Atendimento impecável do início ao fim. A Dra. Tatiane transmite muita segurança e o resultado do meu clareamento ficou incrível e muito natural."</p>
-        <div class="dep-author">
-          <strong>Juliana M.</strong>
-          <span>Paciente de Estética Dental</span>
-        </div>
-      </div>
-
-      <div class="dep-nav">
-        <div class="dep-btn" id="depPrev">
-          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
-        </div>
-        <div class="dep-btn" id="depNext">
-          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contato" id="contato">
-  <div class="container">
     <div class="contato-grid">
-      <div class="contato-info">
-        <span class="eyebrow">Contato</span>
-        <h2>Vamos conversar?</h2>
-        
-        <div class="contato-list">
-          <div class="contato-item">
-            <h5>WhatsApp</h5>
-            <a href="https://wa.me/5547992448872">+55 47 99244-8872</a>
-          </div>
-          <div class="contato-item">
-            <h5>Telefone</h5>
-            <a href="tel:+5547992448872">+55 47 99244-8872</a>
-          </div>
-          <div class="contato-item">
-            <h5>E-mail</h5>
-            <a href="mailto:drtatianemelchert@gmail.com">drtatianemelchert@gmail.com</a>
-          </div>
-          <div class="contato-item">
-            <h5>Endereço</h5>
-            <p>Av. Juscelino Kubitschek, 410, Bloco A, Sala 308<br>Centro, Joinville - SC</p>
-            <a href="https://goo.gl/maps/xxx" target="_blank" style="font-size:.78rem;text-decoration:underline;margin-top:.5rem;display:inline-block;">Abrir Maps</a>
-          </div>
-          <div class="contato-item">
-            <h5>Redes Sociais</h5>
-            <div class="contato-social">
-              <a href="https://www.instagram.com/tatianemelchert/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-              <a href="https://www.facebook.com/dra.tatianemelchert/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            </div>
-          </div>
-        </div>
+      <div class="cont-card">
+        <span>Telefone</span>
+        <strong>(47) 99244-8872</strong>
       </div>
-      
-      <div class="map-box">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.456637389899!2d-48.8457896!3d-26.3116849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb05373305b75%3A0x6a9f6b4d4b8f3b0!2sAv.%20Juscelino%20Kubitschek%2C%20410%20-%20Centro%2C%20Joinville%20-%20SC%2C%2089201-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+      <div class="cont-card">
+        <span>WhatsApp</span>
+        <strong>(47) 99244-8872</strong>
+      </div>
+      <div class="cont-card">
+        <span>E-mail</span>
+        <strong>drtatianemelchert@gmail.com</strong>
+      </div>
+      <div class="cont-card">
+        <span>Localização</span>
+        <strong>Joinville, SC</strong>
       </div>
     </div>
   </div>
@@ -848,195 +314,41 @@
 
 <footer>
   <div class="container">
-    <div class="foot-main">
-      <div class="foot-brand">
-        <div class="logo-mark">
-          <img src="assets/08_logo_chique_transparente.webp?v=2" alt="Dra. Tatiane Melchert" width="40" height="40">
-          <div class="logo-text">
-            <span class="l1">TATIANE MELCHERT</span>
-            <span class="l2">ORTODONTIA E CLÍNICA GERAL</span>
-          </div>
-        </div>
-        <p>Cuidado especializado e atendimento humanizado para transformar o seu sorriso com precisão.</p>
-      </div>
-      <div class="foot-col">
-        <h6>Navegação</h6>
-        <nav>
-          <a href="#sobre">Sobre</a>
-          <a href="#especializacoes">Especialidades</a>
-          <a href="#procedimentos">Procedimentos</a>
-          <a href="#galeria">Clínica</a>
-          <a href="#depoimentos">Depoimentos</a>
-        </nav>
-      </div>
-      <div class="foot-col">
-        <h6>Serviços</h6>
-        <nav>
-          <a href="#procedimentos">Ortodontia Infantil</a>
-          <a href="#procedimentos">Ortodontia Adulto</a>
-          <a href="#procedimentos">Alinhadores Invisalign</a>
-          <a href="#procedimentos">Estética Dental</a>
-        </nav>
-      </div>
-      <div class="foot-col">
-        <h6>Contato</h6>
-        <p>Av. Juscelino Kubitschek, 410, Bloco A, Sala 308<br>Centro, Joinville, SC 89201-100</p>
-        <a href="tel:+5547992448872">+55 47 99244-8872</a>
-        <a href="https://wa.me/5547992448872">WhatsApp</a>
-        <a href="mailto:drtatianemelchert@gmail.com">E-mail</a>
-        <div class="foot-social">
-          <a href="https://www.instagram.com/tatianemelchert/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="https://www.facebook.com/dra.tatianemelchert/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.7c0-.4.3-.7.5-.7z"/></svg></a>
-          <a href="https://wa.me/5547992448872" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
-        </div>
-      </div>
-    </div>
     <div class="foot-bottom">
-      <span>© 2026 Dra. Tatiane Melchert — Ortodontia & Estética. Direitos reservados.</span>
-      <span>CRO-SC 19369</span>
+      <p>&copy; 2024 site.ofc. Todos os direitos reservados.</p>
+      <p>Joinville, Santa Catarina</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/5547992448872" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.14L2 22l5.13-1.54a9.85 9.85 0 004.91 1.31h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 17.9h-.01a8.02 8.02 0 01-4.08-1.12l-.29-.17-3.05.92.91-2.98-.19-.3a8 8 0 01-1.24-4.34c0-4.42 3.6-8.02 8.03-8.02 2.14 0 4.16.84 5.67 2.35a7.96 7.96 0 012.34 5.68c0 4.43-3.6 8-8.09 8zm4.4-6c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+<a href="https://wa.me/5547992448872" class="wa-float" target="_blank">
+  <svg viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.48 2.025 7.787l-2.025 7.413 7.588-1.987c2.206 1.169 4.725 1.837 7.412 1.837 8.837 0 16-7.163 16-16s-7.163-16-16-16zM24.087 22.587c-.337.95-1.687 1.737-2.725 1.963-.713.15-1.637.275-4.787-1.025-4.025-1.662-6.612-5.737-6.812-6s-1.762-2.337-1.762-4.463c0-2.125 1.112-3.175 1.512-3.6.4-.425.875-.537 1.162-.537.288 0 .575 0 .825.012.263.012.613-.1.963.737.337.825 1.162 2.825 1.262 3.037.1.212.163.462.025.737s-.212.438-.425.688c-.212.25-.45.563-.637.75s-.425.412-.187.825c.238.412 1.05 1.737 2.262 2.812 1.562 1.387 2.875 1.825 3.287 2.037.412.212.65.175.887-.1.238-.275 1.025-1.187 1.3-1.6.275-.412.55-.337.925-.2s2.387 1.125 2.8 1.325.688.3.787.475c.1.175.1.987-.237 1.937z"/></svg>
 </a>
 
-<button class="top-float" id="topFloat" aria-label="Voltar ao topo">
-  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg>
-  </button>
-  <img decoding="async" loading="lazy" id="lightboxImg" src="" alt="">
-  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima imagem">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
-  </button>
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-
 <script>
-  // Tema claro/escuro
-  const themeToggle = document.getElementById('themeToggle');
-  const rootEl = document.documentElement;
-  const savedTheme = localStorage.getItem('tmTheme') || 'light';
-  rootEl.setAttribute('data-theme', savedTheme);
-  themeToggle.addEventListener('click', ()=>{
-    const next = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    rootEl.setAttribute('data-theme', next);
-    localStorage.setItem('tmTheme', next);
-  });
-
-  // Header: solid on scroll + hide on scroll down / show on scroll up
-  const header = document.getElementById('header');
-  let lastY = window.scrollY;
-  window.addEventListener('scroll', ()=>{
-    const y = window.scrollY;
-    if(y > 60){ header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
-    if(y > lastY && y > 240){ header.classList.add('hide-nav'); }
-    else{ header.classList.remove('hide-nav'); }
-    lastY = y;
-
-    const topFloat = document.getElementById('topFloat');
-    if(y > 600){ topFloat.classList.add('show'); } else { topFloat.classList.remove('show'); }
-  }, {passive:true});
-
-  document.getElementById('topFloat').addEventListener('click', ()=>{
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-
-  // Menu mobile
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenu = document.getElementById('closeMenu');
-  burger.addEventListener('click', ()=> mobileMenu.style.display='flex');
-  closeMenu.addEventListener('click', ()=> mobileMenu.style.display='none');
-  document.querySelectorAll('.mob-link').forEach(l=> l.addEventListener('click', ()=> mobileMenu.style.display='none'));
-
-  // Reveal on scroll com stagger
-  const revealEls = document.querySelectorAll('.reveal');
-  revealEls.forEach((el,i)=>{ el.style.transitionDelay = (i % 6) * 70 + 'ms'; });
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.15});
-  revealEls.forEach(el=> io.observe(el));
-
-  // Entrada cinematográfica do título do hero: palavra por palavra
-  const heroTitle = document.getElementById('heroTitle');
-  (function splitWords(){
-    if(!heroTitle) return;
-    const walker = document.createTreeWalker(heroTitle, NodeFilter.SHOW_TEXT, null);
-    const textNodes = [];
-    let n;
-    while(n = walker.nextNode()){ textNodes.push(n); }
-    let wordIndex = 0;
-    textNodes.forEach(node=>{
-      const words = node.textContent.split(' ');
-      const frag = document.createDocumentFragment();
-      words.forEach((w,i)=>{
-        if(w === ''){ return; }
-        const wrap = document.createElement('span');
-        wrap.className = 'word';
-        const inner = document.createElement('span');
-        inner.textContent = w + (i < words.length-1 ? '\u00A0' : '');
-        inner.style.animationDelay = (0.15 + wordIndex*0.09) + 's';
-        wrap.appendChild(inner);
-        frag.appendChild(wrap);
-        wordIndex++;
-      });
-      node.parentNode.replaceChild(frag, node);
-    });
-  })();
-
-  // Nav ativo conforme a seção visível
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav.links a[data-nav]');
-  const navIo = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      const link = document.querySelector('nav.links a[href="#'+entry.target.id+'"]');
-      if(!link) return;
-      if(entry.isIntersecting){
-        navLinks.forEach(l=>l.classList.remove('active'));
-        link.classList.add('active');
-      }
-    });
-  }, {rootMargin:'-45% 0px -50% 0px'});
-  sections.forEach(s=> navIo.observe(s));
-
-  // Formulário de agendamento -> WhatsApp
-  document.getElementById('bookingForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const nome = document.getElementById('bkNome').value.trim();
-    const tel = document.getElementById('bkTel').value.trim();
-    const tipo = document.getElementById('bkTipo').value;
-    const msg = 'Olá! Meu nome é ' + nome + ' (telefone ' + tel + ') e gostaria de agendar: ' + tipo + '.';
-    window.open('https://wa.me/5547992448872?text=' + encodeURIComponent(msg), '_blank');
-  });
-
-  // Otimização de carregamento de imagens
   document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (img.complete) {
-        img.classList.add('loaded');
-      } else {
-        img.addEventListener('load', () => img.classList.add('loaded'));
-        // Fallback para erros de carregamento
-        img.addEventListener('error', () => img.classList.add('loaded'));
-      }
-    });
-    // Fallback caso o DOMContentLoaded demore muito
-    setTimeout(() => {
-      images.forEach(img => img.classList.add('loaded'));
-    }, 3000);
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    if ("IntersectionObserver" in window) {
+      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target;
+            lazyImage.classList.add("loaded");
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      });
+      lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+      });
+    } else {
+      lazyImages.forEach(function(img){ img.classList.add("loaded"); });
+    }
+    
+    // Forçar carregamento imediato do logo
+    document.querySelector('.logo-mark img').classList.add('loaded');
   });
 </script>
+
 </body>
 </html>
